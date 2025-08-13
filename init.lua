@@ -6,6 +6,16 @@ vim.api.nvim_create_autocmd("VimEnter", {
     require("nvim-tree.api").tree.open()
   end,
 })
+-- Keybind Helps
+-- <C> is Ctrl
+-- <M> is Meta/Alt
+-- <S> is Shift
+-- <CR> is enter
+-- <PageUp> is the Up arrow key
+-- <PageRight> is the Right arrow key
+-- <PageLeft> is the Left arrow key
+-- <PageDown> is the Down arrow key
+
 -- non-other function keys Keybinds
 -- These are keybinds that don't use Function/Window key, Alt `<M>`, or Ctrl `<C>` keys
 vim.keymap.set("n", "r", "<C-r>", {
@@ -74,6 +84,13 @@ vim.keymap.set("n", "<Tab>", ":NvimTreeFocus<CR>", {
     silent = true,
     desc = "focuses the NvimTree"
 }) -- Enter <CR> is how you exit this portion
+-- End Key
+vim.keymap.set("n", "<End>", ":qa<CR>", {
+    noremap = true,
+    silent = true,
+    desc = "alternative to <C-q> for closing Neovim"
+    -- This is good if you have a tiling Window Manager running in your terminal, like Zellij
+})
 require('config.lazy')
 require('config.lsp')
 require('base')
