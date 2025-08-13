@@ -20,3 +20,8 @@ My config uses the following Plugins:
     - To see the theme I use [theme - dracula](https://github.com/MicroRay620/neovim-config/tree/main/theme.lua)
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [whichkey](https://github.com/folke/which-key.nvim)
+
+# Installing
+```git
+git clone https://github.com/your-username/nvim-config.git ~/.config/nvim
+```
