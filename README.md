@@ -23,5 +23,5 @@ My config uses the following Plugins:
 
 # Installing
 ```git
-git clone https://github.com/your-username/nvim-config.git ~/.config/nvim
+git clone https://github.com/MicroRay620/neovim-config.git ~/.config/nvim
 ```
