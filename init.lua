@@ -8,15 +8,14 @@ vim.api.nvim_create_autocmd("VimEnter", {
 })
 -- non-other function keys Keybinds
 -- These are keybinds that don't use Function/Window key, Alt `<M>`, or Ctrl `<C>` keys
-vim.keymap.set("n", "t", "<C-r>", {
+vim.keymap.set("n", "r", "<C-r>", {
   noremap = true,
   nowait = true;
   silent = true,
   desc = "redo last change"
 })
-vim.keymap.set("n", "c", ":terminal<CR>", {
+vim.keymap.set("n", "t", ":terminal<CR>", {
     -- This is to get to terminal view without doing :terminal
-    -- c was chosen for the short-hand of Command
     noremap = true,
     nowait = true,
     silent = true,
