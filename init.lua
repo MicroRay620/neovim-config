@@ -1,11 +1,10 @@
-vim.g.maplocalleader = " "
-vim.g.mapleader = "\x1B"
 -- Open NvimTree on startup
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     require("nvim-tree.api").tree.open()
   end,
 })
+
 -- Keybind Helps
 -- <C> is Ctrl
 -- <M> is Meta/Alt
@@ -15,6 +14,9 @@ vim.api.nvim_create_autocmd("VimEnter", {
 -- <PageRight> is the Right arrow key
 -- <PageLeft> is the Left arrow key
 -- <PageDown> is the Down arrow key
+
+vim.g.maplocalleader = " "
+vim.g.mapleader = "\x1B" -- Supposed to be Ctrl, doesn't work for some reason
 
 -- non-other function keys Keybinds
 -- These are keybinds that don't use Function/Window key, Alt `<M>`, or Ctrl `<C>` keys
@@ -31,6 +33,7 @@ vim.keymap.set("n", "t", ":terminal<CR>", {
     silent = true,
     desc = "Opens terminal window"
 })
+
 -- Ctrl Keybinds
 -- Ctrl is done by using `<C>` in the keymap
 vim.keymap.set("n", "<C-s>", ":w<CR>", {
@@ -43,6 +46,7 @@ vim.keymap.set("n", "<C-s>", ":w<CR>", {
     desc = "saves the file"
 })
 vim.keymap.set("n", "<C-q>", ":qa")
+
 -- Alt Keybinds
 -- Alt is done by using `<M>` in the keymap
 vim.keymap.set("n", "<M-n>", ":tabnew<CR>", {
@@ -78,12 +82,14 @@ vim.keymap.set("n", "<M-t>", ":NvimTree", {
     silent = true,
     desc = "opens Neovim Tree"
 })
+
 -- Tab Keybinds
 vim.keymap.set("n", "<Tab>", ":NvimTreeFocus<CR>", {
     noremap = true,
     silent = true,
     desc = "focuses the NvimTree"
 }) -- Enter <CR> is how you exit this portion
+
 -- End Key
 vim.keymap.set("n", "<End>", ":qa<CR>", {
     noremap = true,
