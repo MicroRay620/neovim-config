@@ -46,6 +46,7 @@ vim.keymap.set("n", "<M-d>", ":tabclose<CR>", {
     silent = true,
     desc = "closes the current tab"
 })
+-- For some reason the tab commands don't work
 vim.keymap.set("n", "<M-PageRight>", ":tabnext<CR>", {
     -- This is Alt + Right Arrow
     noremap = true,
@@ -57,6 +58,16 @@ vim.keymap.set("n", "<M-PageLeft>", ":tabprevious<CR>", {
     noremap = true,
     silent = true,
     desc = "goes to the previous tab"
+})
+vim.keymap.set("n", "<M-c>", ":NvimTreeCollapse", {
+    noremap = true,
+    silent = true,
+    desc = "closes Neovim Tree"
+})
+vim.keymap.set("n", "<M-t>", ":NvimTree", {
+    noremap = true,
+    silent = true,
+    desc = "opens Neovim Tree"
 })
 -- Tab Keybinds
 vim.keymap.set("n", "<Tab>", ":NvimTreeFocus<CR>", {
