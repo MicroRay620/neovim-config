@@ -88,6 +88,12 @@ vim.keymap.set("n", "<End>", ":qa<CR>", {
     silent = false,
     desc = "force ends the session"
 })
+vim.keymap.set("n", "<Home>", ":q<CR>", {
+    noremap = true,
+    silent = false,
+    desc = "closes current session spot"
+})
+
 require('config.lazy')
 require('config.lsp')
 require('base')
