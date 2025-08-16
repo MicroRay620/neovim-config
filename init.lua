@@ -45,7 +45,7 @@ vim.keymap.set("n", "<C-s>", ":w<CR>", {
     -- Issue of the keymap not auto-executing has returned for some reason
     desc = "saves the file"
 })
-vim.keymap.set("n", "<C-q>", ":qa", {
+vim.keymap.set("n", "<C-q>", ":qa<CR>", {
     noremap = true,
     silent = false,
     desc = "exits neovim"
@@ -87,6 +87,7 @@ vim.keymap.set("n", "<End>", ":qa<CR>", {
     noremap = true,
     silent = false,
     desc = "force ends the session"
+    -- Good for tiling window manager Terminals, like zellij
 })
 vim.keymap.set("n", "<Home>", ":q<CR>", {
     noremap = true,
