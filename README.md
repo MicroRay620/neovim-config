@@ -17,11 +17,6 @@ My config uses the following Plugins:
 - [suave](https://github.com/nyngwang/suave.lua)
 - [surround](https://github.com/kylechui/nvim-surround)
 - [theme](https://github.com/Mofiqul/dracula.nvim) 
-    - To see the theme I use [theme - dracula](https://github.com/MicroRay620/neovim-config/tree/main/theme.lua)
+    - To see the theme I use [theme - dracula](https://github.com/MicroRay620/neovim-config/blob/main/lua/plugins/theme.lua)
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [whichkey](https://github.com/folke/which-key.nvim)
-
-# Installing
-```git
-git clone https://github.com/MicroRay620/neovim-config.git ~/.config/nvim
-```
