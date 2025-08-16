@@ -4,7 +4,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
     require("nvim-tree.api").tree.open()
   end,
 })
--- Hopefully git will work
+
 -- Keybind Helps
 -- <C> is Ctrl
 -- <M> is Meta/Alt
