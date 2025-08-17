@@ -50,6 +50,12 @@ vim.keymap.set("n", "<C-q>", ":qa<CR>", {
     silent = false,
     desc = "exits neovim"
 })
+vim.keymap.set("n", "<C-a>", ":wa<CR>", {
+    noremap = true,
+    nowait = true,
+    silent = false,
+    desc = "saves every file in directory"
+})
 
 -- Alt Keybinds
 -- Alt is done by using `<M>` in the keymap
