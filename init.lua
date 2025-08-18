@@ -57,6 +57,14 @@ vim.keymap.set("n", "<C-a>", ":wa<CR>", {
     desc = "saves every file in directory"
 })
 
+-- Shift Keybinds
+vim.keymap.set("n", "<S-s>", ":w<CR>", {
+    noremap = true,
+    nowait = true,
+    silent = false,
+    desc = "alternative saves file"
+})
+
 -- Alt Keybinds
 -- Alt is done by using `<M>` in the keymap
 vim.keymap.set("n", "<M-n>", ":tabnew<CR>", {
@@ -81,6 +89,7 @@ vim.keymap.set("n", "<M-PageLeft>", ":tabprevious<CR>", {
   silent = true,
   desc = "goes to the previous tab"
 })
+
 -- Tab Keybinds
 vim.keymap.set("n", "<Tab>", ":NvimTreeFocus<CR>", {
   noremap = true,
