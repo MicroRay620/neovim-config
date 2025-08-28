@@ -67,23 +67,23 @@ vim.keymap.set("n", "<S-s>", ":w<CR>", {
 
 -- Alt Keybinds
 -- Alt is done by using `<M>` in the keymap
-vim.keymap.set("n", "<M-n>", ":tabnew<CR>", {
+vim.keymap.set("n", "<A-n>", ":tabnew<CR>", {
     noremap = true,
     silent = true,
     desc = "opens a new tab"
 })
-vim.keymap.set("n", "<M-d>", ":tabclose<CR>", {
+vim.keymap.set("n", "<A-d>", ":tabclose<CR>", {
     noremap = true,
     silent = true,
     desc = "closes the current tab"
 })
-vim.keymap.set("n", "<M-PageRight>", ":tabnext<CR>", {
+vim.keymap.set("n", "<A-PageRight>", ":tabnext<CR>", {
     -- This is Alt + Right Arrow
     noremap = true,
     silent = true,
     desc = "goes to the next tab"
 })
-vim.keymap.set("n", "<M-PageLeft>", ":tabprevious<CR>", {
+vim.keymap.set("n", "<A-PageLeft>", ":tabprevious<CR>", {
   -- This is Alt + Left Arrow
   noremap = true,
   silent = true,
