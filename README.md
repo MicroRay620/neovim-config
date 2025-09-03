@@ -20,3 +20,22 @@ My config uses the following Plugins:
     - To see the theme I use [theme - dracula](https://github.com/MicroRay620/neovim-config/blob/main/lua/plugins/theme.lua)
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [whichkey](https://github.com/folke/which-key.nvim)
+
+# Mason Installs
+When you use the config I have these installed via Mason:
+- luacheck
+- cspell
+- htmlhint
+- clangd
+- cpplint
+- cpptools
+- csharp-language-server
+- css-lsp
+- debugpy
+- lua-language-server
+- php-debug-adapter
+
+To install these run this script
+```vim
+:MasonInstall luacheck cspell htmlhint clangd cpplint cpptools csharp-language-server css-lsp debugpy lua-language-server php-debug-adapter
+```
