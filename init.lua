@@ -5,6 +5,13 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
+-- Load Termdebug on startup
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.cmd("packadd termdebug")
+  end,
+})
+
 -- Keybind Helps
 -- <C> is Ctrl
 -- <M> is Meta/Alt
@@ -58,7 +65,13 @@ vim.keymap.set("n", "<C-a>", ":wa<CR>", {
 })
 
 -- Shift Keybinds
-vim.keymap.set("n", "<S-s>", ":w<CR>", {
+vim.keymap.set("n", "S", ":w<CR>", {
+    noremap = true,
+    nowait = true,
+    silent = false,
+    desc = "alternative saves file"
+})
+vim.keymap.set("n", "T", ":Termdebug<CR>", {
     noremap = true,
     nowait = true,
     silent = false,
@@ -108,6 +121,14 @@ vim.keymap.set("n", "<Home>", ":q<CR>", {
     noremap = true,
     silent = false,
     desc = "closes current session spot"
+})
+
+-- F Keys
+vim.keymap.set("n", "<F2>", ":Run<CR>", {
+    noremap = true,
+    nowait = true,
+    silent = true,
+    desc = "runs the debugged code"
 })
 
 require('config.lazy')
