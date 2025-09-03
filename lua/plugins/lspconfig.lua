@@ -1,6 +1,16 @@
 local servers = {
-    "pyright",
-    "rust_analyzer",
+    "pyright", -- Python
+    "rust_analyzer", -- Rust
+    "cland", -- C/C++
+    "omnisharp", -- C#
+    "kotlin_language_server",
+    "tsserver", -- JS/TS
+    "gopls", -- Go
+    "jdtls",
+    "html",
+    "css",
+    "jsonls",
+    "yamls",
 }
 
 local on_attach = function(_client, _bufnr)
@@ -17,5 +27,11 @@ return {
                 on_attach = on_attach,
             })
         end
+
+        lspconfig.clangd.setup({
+            on_attach = on_attach,
+            capalities = capabilities,
+            cmd = { "omnisharp", "--languageserver" },
+        })
     end,
 }
