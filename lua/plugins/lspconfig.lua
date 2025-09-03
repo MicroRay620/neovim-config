@@ -30,10 +30,6 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 local status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 
-if status then
-    capabilities = cmp_nvim_lsp.default_capabilities()
-end
-
 return {
     "neovim/nvim-lspconfig",
     event = {"BufNewFile", "BufReadPost"},
@@ -45,6 +41,11 @@ return {
                 on_attach = on_attach,
             })
         end
+
+        if status then
+            capabilities = cmp_nvim_lsp.default_capabilities()
+        end
+
 
         -- CLang
         lspconfig.clangd.setup({
@@ -63,6 +64,12 @@ return {
             on_attach = on_attach,
             capabilities = capabilities,
             cmd = { "omnisharp", "--languageserver" },
+        })
+
+        -- Kotlin
+        lspconfig.kotlin_language_server.setup({
+            on_attack = on_attach,
+            capabilities = capabilities,
         })
     end,
 }
