@@ -29,7 +29,7 @@ vim.keymap.set("n", "r", "<C-r>", {
 })
 vim.keymap.set("n", "t", ":terminal<CR>", {
   noremap = true,
-  nowait = true;
+  nowait = true,
   silent = true,
   desc = "opens terminal"
 })
