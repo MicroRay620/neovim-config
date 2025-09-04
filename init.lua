@@ -81,12 +81,12 @@ vim.keymap.set("n", "T", ":Termdebug<CR>", {
 
 -- Alt Keybinds
 -- Alt is done by using `<M>` in the keymap
-vim.keymap.set("n", "<A-n>", ":tabnew<CR>", {
+vim.keymap.set("n", "<M-n>", ":tabnew<CR>", {
     noremap = true,
     silent = true,
     desc = "opens a new tab"
 })
-vim.keymap.set("n", "<A-d>", ":tabclose<CR>", {
+vim.keymap.set("n", "<M-d>", ":tabclose<CR>", {
     noremap = true,
     silent = true,
     desc = "closes the current tab"
