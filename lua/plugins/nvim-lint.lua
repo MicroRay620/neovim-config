@@ -5,7 +5,7 @@ return {
             c = {"clang-tidy", "cppcheck"},
             cpp = {"clang-tidy", "cppcheck"},
             cs = {"dotnet-format"},
-            javascript = {"eslint_d"},
+            javascript = {"eslint-lsp"},
             lua = {"luacheck"},
             markdown = {"markdownlint"},
             python = {"flake8", "mypy"},
