@@ -39,7 +39,7 @@ When you use the config I have these installed via Mason:
 
 To install these run this script
 ```vim
-:MasonInstall luacheck cspell htmlhint clangd cpplint cpptools csharp-language-server css-lsp debugpy lua-language-server php-debug-adapter
+:MasonInstall luacheck cspell htmlhint clangd cpplint cpptools csharp-language-server css-lsp debugpy lua-language-server php-debug-adapter eslint-lsp
 ```
 > The MasonInstalls are optional 
 
