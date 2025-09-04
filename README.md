@@ -13,6 +13,7 @@ My config uses the following Plugins:
 - [mason](https://github.com/mason-org/mason.nvim)
 - [nvim-dap-lldb](https://github.com/julianolf/nvim-dap-lldb)
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+- [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 - [suave](https://github.com/nyngwang/suave.lua)
 - [surround](https://github.com/kylechui/nvim-surround)
@@ -27,6 +28,7 @@ When you use the config I have these installed via Mason:
 - cspell
 - htmlhint
 - clangd
+- clang-format
 - cpplint
 - cpptools
 - csharp-language-server
@@ -39,3 +41,6 @@ To install these run this script
 ```vim
 :MasonInstall luacheck cspell htmlhint clangd cpplint cpptools csharp-language-server css-lsp debugpy lua-language-server php-debug-adapter
 ```
+> The MasonInstalls are optional 
+
+For proper usage, make sure to install luarocker
