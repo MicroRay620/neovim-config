@@ -1,16 +1,19 @@
 local servers = {
-    "pyright", -- Python
-    "rust_analyzer", -- Rust
-    "clangd", -- C/C++
-    "omnisharp", -- C#
-    "kotlin_language_server",
-    "ts_ls", -- JS/TS
-    "gopls", -- Go
-    "jdtls",
-    "cssls",
+    "clangd", -- C/C++ LSP
+    "cssls", -- CSS LSP
+    "gopls", -- Go LSP
     "html",
-    "jsonls",
-    "yamlls",
+    "jdtls",
+    "jsonls", -- JSON LSP (.json)
+    "kotlin_language_server", -- Kotlin LSP (.kot)
+    "omnisharp", -- C# LSP (.cs)
+    "pyright", -- Python LSP (.py)
+    "ruby-lsp", -- Ruby LSP (.rb)
+    "rust_analyzer",
+    "some-sass-language-server", -- SASS/SCSS LSP (.sass/.scss)
+    "tailwindcss-language-server", 
+    "ts_ls", -- Javascript/Typescript LSP (.js/.ts)
+    "yamlls"
 }
 
 local on_attach = function(_client, _bufnr)
