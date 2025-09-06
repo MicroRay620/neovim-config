@@ -12,125 +12,117 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
-
--- Keybind Helps
--- <C> is Ctrl
--- <M> is Meta/Alt
--- <S> is Shift
--- <CR> is enter
--- <PageUp> is the Up arrow key
--- <PageRight> is the Right arrow key
--- <PageLeft> is the Left arrow key
--- <PageDown> is the Down arrow key
-
 vim.g.maplocalleader = " "
-vim.g.mapleader = "\x1B" -- Supposed to be Ctrl, doesn't work for some reason
+vim.g.mapleader = " "
+
+-- Define NoChoices with only noremap and nowait
+local NoChoices = { 
+    noremap = true,
+    nowait = true
+}
 
 -- non-other function keys Keybinds
--- These are keybinds that don't use Function/Window key, Alt `<M>`, or Ctrl `<C>` keys
-vim.keymap.set("n", "r", "<C-r>", {
-  -- This is to redo the last change, not to be confused with the terminal
-  noremap = true,
-  nowait = true,
-  silent = true,
-  desc = "redo last change"
-})
-vim.keymap.set("n", "t", ":terminal<CR>", {
-  noremap = true,
-  nowait = true,
-  silent = true,
-  desc = "opens terminal"
-})
+vim.keymap.set("n", "r", "<C-r>", vim.tbl_extend("keep", NoChoices, {
+    silent = true,
+    desc = "redo last change"
+}))
+
+vim.keymap.set("n", "t", ":terminal<CR>", vim.tbl_extend("keep", NoChoices, {
+    silent = true,
+    desc = "opens terminal"
+}))
 
 -- Ctrl Keybinds
--- Ctrl is done by using `<C>` in the keymap
-vim.keymap.set("n", "<C-s>", ":w<CR>", {
-    -- Having it be `:wa<CR>` caused issues with the keymap not auto-executing, changed to `:w<CR>` to resolve the issue
-    -- Figure out how to make a keymap that saves all the files
-    noremap = true,
-    nowait = true,
-    silent = false, -- having silent = true broke the keymap function, previously this helped fix it
-    -- Issue of the keymap not auto-executing has returned for some reason
+vim.keymap.set("n", "<C-s>", ":w<CR>", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
     desc = "saves the file"
-})
-vim.keymap.set("n", "<C-q>", ":qa<CR>", {
-    noremap = true,
+}))
+
+vim.keymap.set("n", "<C-q>", ":qa<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = false,
     desc = "exits neovim"
-})
-vim.keymap.set("n", "<C-a>", ":wa<CR>", {
-    noremap = true,
-    nowait = true,
+}))
+
+vim.keymap.set("n", "<C-a>", ":wa<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = false,
     desc = "saves every file in directory"
-})
+}))
 
 -- Shift Keybinds
-vim.keymap.set("n", "S", ":w<CR>", {
-    noremap = true,
-    nowait = true,
+vim.keymap.set("n", "S", ":w<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = false,
     desc = "alternative saves file"
-})
-vim.keymap.set("n", "T", ":Termdebug<CR>", {
-    noremap = true,
-    nowait = true,
+}))
+
+vim.keymap.set("n", "T", ":Termdebug<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = false,
-    desc = "alternative saves file"
-})
+    desc = "opens Termdebug"
+}))
 
 -- Alt Keybinds
--- Alt is done by using `<M>` in the keymap
-vim.keymap.set("n", "<M-n>", ":tabnew<CR>", {
-    noremap = true,
+vim.keymap.set("n", "<M-n>", ":tabnew<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
     desc = "opens a new tab"
-})
-vim.keymap.set("n", "<M-d>", ":tabclose<CR>", {
-    noremap = true,
+}))
+
+vim.keymap.set("n", "<M-d>", ":tabclose<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
     desc = "closes the current tab"
-})
-vim.keymap.set("n", "<A-PageRight>", ":tabnext<CR>", {
-    -- This is Alt + Right Arrow
-    noremap = true,
+}))
+
+vim.keymap.set("n", "<A-PageRight>", ":tabnext<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
     desc = "goes to the next tab"
-})
-vim.keymap.set("n", "<A-PageLeft>", ":tabprevious<CR>", {
-  -- This is Alt + Left Arrow
-  noremap = true,
-  silent = true,
-  desc = "goes to the previous tab"
-})
+}))
+
+vim.keymap.set("n", "<A-PageLeft>", ":tabprevious<CR>", vim.tbl_extend("keep", NoChoices, {
+    silent = true,
+    desc = "goes to the previous tab"
+}))
 
 -- Tab Keybinds
-vim.keymap.set("n", "<Tab>", ":NvimTreeFocus<CR>", {
-  noremap = true,
-  silent = true,
-  desc = "focuses the NvimTree"
-}) -- Enter <CR> is how you exit this portion
+vim.keymap.set("n", "<Tab>", ":NvimTreeFocus<CR>", vim.tbl_extend("keep", NoChoices, {
+    silent = true,
+    desc = "focuses the NvimTree"
+}))
 
 -- Special keybinds
-vim.keymap.set("n", "<End>", ":qa<CR>", {
-    noremap = true,
+vim.keymap.set("n", "<End>", ":qa<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = false,
     desc = "force ends the session"
-    -- Good for tiling window manager Terminals, like zellij
-})
-vim.keymap.set("n", "<Home>", ":q<CR>", {
-    noremap = true,
+}))
+
+vim.keymap.set("n", "<Home>", ":q<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = false,
     desc = "closes current session spot"
-})
+}))
 
 -- F Keys
-vim.keymap.set("n", "<F2>", ":Run<CR>", {
-    noremap = true,
-    nowait = true,
+vim.keymap.set("n", "<F2>", ":Run<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
     desc = "runs the debugged code"
-})
+}))
+
+-- Arrow Keys
+vim.keymap.set("n", "<leader>k", "<C-w>k", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "moves to the window up"
+}))
+
+vim.keymap.set("n", "<leader>h", "<C-w>h", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "moves to the window to the left"
+}))
+
+vim.keymap.set("n", "<leader>j", "<C-w>j", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "moves to the window down"
+}))
+
+vim.keymap.set("n", "<leader>l", "<C-w>l", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "moves to the window to the right"
+}))
 
 require('config.lazy')
 require('config.lsp')
