@@ -8,10 +8,8 @@ local servers = {
     "kotlin_language_server", -- Kotlin LSP (.kot)
     "omnisharp", -- C# LSP (.cs)
     "pyright", -- Python LSP (.py)
-    "ruby-lsp", -- Ruby LSP (.rb)
+    "ruby_lsp", -- Ruby LSP (.rb)
     "rust_analyzer",
-    "some-sass-language-server", -- SASS/SCSS LSP (.sass/.scss)
-    "tailwindcss-language-server", 
     "ts_ls", -- Javascript/Typescript LSP (.js/.ts)
     "yamlls"
 }
@@ -20,10 +18,10 @@ local on_attach = function(_client, _bufnr)
     local opts = { buffer = _bufnr, noremap = true, silent = true }
 
     -- Key maps
-    vim.keymap.set("n", "E", vim.lsp.buf.declaration, opts)
-    vim.keymap.set("n", "G", vim.lsp.buf.definition, opts)
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-    vim.keymap.set("n", "M", vim.lsp.buf.implimentation, opts)
+    vim.keymap.set("n", "<F3>", vim.lsp.buf.declaration, opts)
+    vim.keymap.set("n", "<F4>", vim.lsp.buf.definition, opts)
+    vim.keymap.set("n", "<F5>", vim.lsp.buf.hover, opts)
+    vim.keymap.set("n", "<F6>", vim.lsp.buf.implimentation, opts)
     vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
     vim.keymap.set("n", "<C-r>", vim.lsp.buf.references, opts)
     -- For workplace folders, make the keybind have vim.lsp.buf.<add/remove>_workspace_folder
