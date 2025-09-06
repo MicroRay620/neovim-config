@@ -16,7 +16,7 @@ vim.g.maplocalleader = " "
 vim.g.mapleader = " "
 
 -- Define NoChoices with only noremap and nowait
-local NoChoices = { 
+local NoChoices = {
     noremap = true,
     nowait = true
 }
