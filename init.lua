@@ -26,18 +26,56 @@ vim.keymap.set("n", "r", "<C-r>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
     desc = "redo last change"
 }))
-
 vim.keymap.set("n", "t", ":terminal<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
     desc = "opens terminal"
 }))
-vim.keymap.set("n", "tv", ":vsp | terminal<CR>", vim.tbl_extend("keep", NoChoices, {
-    silent = true,
-    desc = "opens the terminal in a verticle window"
+
+-- Leader Keybinds (leader is space)
+vim.keymap.set("n", "<leader>k", "<C-w>k", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "moves to the window up"
 }))
-vim.keymap.set("n", "th", ":sp | terminal<CR>", vim.tbl_extend("keep", NoChoices, {
+
+vim.keymap.set("n", "<leader>h", "<C-w>h", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "moves to the window to the left"
+}))
+
+vim.keymap.set("n", "<leader>j", "<C-w>j", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "moves to the window down"
+}))
+
+vim.keymap.set("n", "<leader>l", "<C-w>l", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "moves to the window to the right"
+}))
+
+vim.keymap.set("n", "<leader>v", ":vsp<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
-    desc = "opens the terminal in a horizontal window"
+    desc = "splits the window vertically"
+}))
+
+vim.keymap.set("n", "<leader>h", ":sp<CR>", vim.tbl_extend("keep", NoChoices, {
+    silent = true,
+    desc = "splits the window horizontally"
+}))
+
+vim.keymap.set("n", "<leader>t", ":sp | terminal<CR>", vim.tbl_extend("keep", NoChoices, {
+    silent = true,
+    desc = "splits the window horizontally while also opening the terminal"
+}))
+
+-- Shift Keybinds
+vim.keymap.set("n", "S", ":w<CR>", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "alternative saves file"
+}))
+
+vim.keymap.set("n", "T", ":Termdebug<CR>", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "opens Termdebug"
 }))
 
 -- Ctrl Keybinds
@@ -54,17 +92,6 @@ vim.keymap.set("n", "<C-q>", ":qa<CR>", vim.tbl_extend("keep", NoChoices, {
 vim.keymap.set("n", "<C-a>", ":wa<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = false,
     desc = "saves every file in directory"
-}))
-
--- Shift Keybinds
-vim.keymap.set("n", "S", ":w<CR>", vim.tbl_extend("keep", NoChoices, {
-    silent = false,
-    desc = "alternative saves file"
-}))
-
-vim.keymap.set("n", "T", ":Termdebug<CR>", vim.tbl_extend("keep", NoChoices, {
-    silent = false,
-    desc = "opens Termdebug"
 }))
 
 -- Alt Keybinds
@@ -109,27 +136,6 @@ vim.keymap.set("n", "<Home>", ":q<CR>", vim.tbl_extend("keep", NoChoices, {
 vim.keymap.set("n", "<F2>", ":Run<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
     desc = "runs the debugged code"
-}))
-
--- Arrow Keys
-vim.keymap.set("n", "<leader>k", "<C-w>k", vim.tbl_extend("keep", NoChoices, {
-    silent = false,
-    desc = "moves to the window up"
-}))
-
-vim.keymap.set("n", "<leader>h", "<C-w>h", vim.tbl_extend("keep", NoChoices, {
-    silent = false,
-    desc = "moves to the window to the left"
-}))
-
-vim.keymap.set("n", "<leader>j", "<C-w>j", vim.tbl_extend("keep", NoChoices, {
-    silent = false,
-    desc = "moves to the window down"
-}))
-
-vim.keymap.set("n", "<leader>l", "<C-w>l", vim.tbl_extend("keep", NoChoices, {
-    silent = false,
-    desc = "moves to the window to the right"
 }))
 
 require('config.lazy')
