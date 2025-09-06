@@ -31,6 +31,14 @@ vim.keymap.set("n", "t", ":terminal<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
     desc = "opens terminal"
 }))
+vim.keymap.set("n", "tv", ":vsp | terminal<CR>", vim.tbl_extend("keep", NoChoices, {
+    silent = true,
+    desc = "opens the terminal in a verticle window"
+}))
+vim.keymap.set("n", "th", ":sp | terminal<CR>", vim.tbl_extend("keep", NoChoices, {
+    silent = true,
+    desc = "opens the terminal in a horizontal window"
+}))
 
 -- Ctrl Keybinds
 vim.keymap.set("n", "<C-s>", ":w<CR>", vim.tbl_extend("keep", NoChoices, {
