@@ -67,6 +67,7 @@ return {
             capabilities = capabilities,
         })
         -- Ruby
+        -- Make sure you run `sudo gem install ruby-lsp`, this will globally install the ruby-lsp to your system
         lspconfig.ruby_lsp.setup({
             on_attach = on_attach,
             capabilities = capabilities,
