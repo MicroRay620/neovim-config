@@ -47,31 +47,6 @@ vim.keymap.set("n", "<leader>j", "<C-w>j", vim.tbl_extend("keep", NoChoices, {
     desc = "moves to the window down"
 }))
 
--- Switching Windows in Terminal
-vim.keymap.set("t", "<leader>k", "<C-w>k", vim.tbl_extend("keep", NoChoices, {
-    silent = false,
-    desc = "moves to the window up"
-}))
-
-vim.keymap.set("t", "<leader>h", "<C-w>h", vim.tbl_extend("keep", NoChoices, {
-    silent = false,
-    desc = "moves to the window to the left"
-}))
-
-vim.keymap.set("t", "<leader>j", "<C-w>j", vim.tbl_extend("keep", NoChoices, {
-    silent = false,
-    desc = "moves to the window down"
-}))
-
-vim.keymap.set("t", "<leader>l", "<C-w>l", vim.tbl_extend("keep", NoChoices, {
-    silent = false,
-    desc = "moves to the window to the right"
-}))
-vim.keymap.set("t", "<leader>l", "<C-w>l", vim.tbl_extend("keep", NoChoices, {
-    silent = false,
-    desc = "moves to the window to the right"
-}))
-
 -- Making Windows
 vim.keymap.set("n", "<leader>v", ":vsp<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
