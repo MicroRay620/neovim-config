@@ -32,19 +32,53 @@ vim.keymap.set("n", "t", ":terminal<CR>", vim.tbl_extend("keep", NoChoices, {
 }))
 
 -- Leader Keybinds (leader is space)
+-- Up
 vim.keymap.set("n", "<leader>k", "<C-w>k", vim.tbl_extend("keep", NoChoices, {
     silent = false,
     desc = "moves to the window up"
 }))
 
+-- Left
 vim.keymap.set("n", "<leader>h", "<C-w>h", vim.tbl_extend("keep", NoChoices, {
     silent = false,
     desc = "moves to the window to the left"
 }))
 
+-- Right
+vim.keymap.set("n", "<leader>l", "<C-w>l", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "moves the window to the right"
+}))
+
+-- Down
 vim.keymap.set("n", "<leader>j", "<C-w>j", vim.tbl_extend("keep", NoChoices, {
     silent = false,
     desc = "moves to the window down"
+}))
+
+-- Arrow Key Moving
+-- Up
+vim.keymap.set("n", "<leader><Up>", "<C-w>k", vim.tbl_extend("keep", NoChoices, { 
+    silent = false,
+    desc = "arrow key. moves the window up"
+}))
+
+-- Left
+vim.keymap.set("n", "<leader><Left>", "<C-w>h", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "arrow key. moves window to the left"
+}))
+
+-- Right
+vim.keymap.set("n", "<leader><Right>", "<C-w>l", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "arrow key. moves window to the right"
+}))
+
+-- Down
+vim.keymap.set("n", "<leader><Down>", "<C-w>j", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "arrow key. moves window down"
 }))
 
 -- Making Windows
@@ -58,6 +92,7 @@ vim.keymap.set("n", "<leader>o", ":sp<CR>", vim.tbl_extend("keep", NoChoices, {
     desc = "splits the window horizontally"
 }))
 
+-- Split Terminal
 vim.keymap.set("n", "<leader>t", ":sp | terminal<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
     desc = "splits the window horizontally while also opening the terminal"
@@ -101,12 +136,12 @@ vim.keymap.set("n", "<M-d>", ":tabclose<CR>", vim.tbl_extend("keep", NoChoices, 
     desc = "closes the current tab"
 }))
 
-vim.keymap.set("n", "<A-PageRight>", ":tabnext<CR>", vim.tbl_extend("keep", NoChoices, {
+vim.keymap.set("n", "<M><Right>", ":tabnext<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
     desc = "goes to the next tab"
 }))
 
-vim.keymap.set("n", "<A-PageLeft>", ":tabprevious<CR>", vim.tbl_extend("keep", NoChoices, {
+vim.keymap.set("n", "<M><Left>", ":tabprevious<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
     desc = "goes to the previous tab"
 }))
