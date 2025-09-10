@@ -12,9 +12,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
-vim.g.maplocalleader = " "
-vim.g.mapleader = " "
-
 -- Define NoChoices with only noremap and nowait
 NoChoices = {
     noremap = true,
@@ -25,3 +22,4 @@ require('keymaps')
 require('config.lazy')
 require('config.lsp')
 require('base')
+
