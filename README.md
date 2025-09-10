@@ -84,17 +84,5 @@ For proper usage, make sure to install luarocker
 | `Home` | `:q<CR>` | Closes current window |
 | `F2` | `:Run<CR>` | Runs the debugged code |
 
-## Terminal Mode
-
-| Key Combination | Command | Description |
-| :--- | :--- | :--- |
-| `Leader + k` | `Ctrl+w k` | Moves to the window up |
-| `Leader + h` | `Ctrl+w h` | Moves to the window to the left |
-| `Leader + l` | `Ctrl+w l` | Moves the window to the right |
-| `Leader + j` | `Ctrl+w j` | Moves to the window down |
-| `Leader + Up Arrow` | `Ctrl+w k` | Arrow key. Moves the window up |
-| `Leader + Left Arrow` | `Ctrl+w h` | Arrow key. Moves window to the left |
-| `Leader + Right Arrow` | `Ctrl+w l` | Arrow key. Moves window to the right |
-| `Leader + Down Arrow` | `Ctrl+w j` | Arrow key. Moves window down |
-
+To set your own leader go to [init.lua](https://github.com/MicroRay620/neovim-config/blob/main/init.lua) and look for `vim.g.mapleader`, set the quotations to what key you want your leader to be.
 **Note:** The leader key is set to `<Space>`
