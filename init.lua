@@ -81,6 +81,55 @@ vim.keymap.set("n", "<leader><Down>", "<C-w>j", vim.tbl_extend("keep", NoChoices
     desc = "arrow key. moves window down"
 }))
 
+-- Terminal Navigation
+-- Terminal Up
+vim.keymap.set("t", "<leader>k", "<C-w>k", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "terminal. moves to the window up"
+}))
+
+-- Terminal Left
+vim.keymap.set("t", "<leader>h", "<C-w>h", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "terminal. moves to the window to the left"
+}))
+
+-- Terminal Right
+vim.keymap.set("t", "<leader>l", "<C-w>l", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "terminal. moves the window to the right"
+}))
+
+-- Terminal Down
+vim.keymap.set("t", "<leader>j", "<C-w>j", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "terminal. moves to the window down"
+}))
+
+-- Arrow Key Terminal Moving
+-- Terminal Up Arrow
+vim.keymap.set("t", "<leader><Up>", "<C-w>k", vim.tbl_extend("keep", NoChoices, { 
+    silent = false,
+    desc = "arrow key. terminal. moves the window up"
+}))
+
+-- Terminal Left Arrow
+vim.keymap.set("t", "<leader><Left>", "<C-w>h", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "arrow key. terminal. moves window to the left"
+}))
+
+-- Terminal Right Arrow
+vim.keymap.set("t", "<leader><Right>", "<C-w>l", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "arrow key. terminal. moves window to the right"
+}))
+
+-- Terminal Down Arrow
+vim.keymap.set("t", "<leader><Down>", "<C-w>j", vim.tbl_extend("keep", NoChoices, {
+    silent = false,
+    desc = "arrow key. terminal. moves window down"
+}))
 -- Making Windows
 vim.keymap.set("n", "<leader>v", ":vsp<CR>", vim.tbl_extend("keep", NoChoices, {
     silent = true,
