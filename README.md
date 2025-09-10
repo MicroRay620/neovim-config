@@ -47,3 +47,54 @@ To install these run this script
 > The MasonInstalls are optional 
 
 For proper usage, make sure to install luarocker
+
+# Keymaps
+# Keybindings Summary
+
+## Normal Mode
+
+| Key Combination | Command | Description |
+| :--- | :--- | :--- |
+| `r` | `Ctrl+r` | Redo last change |
+| `t` | `:terminal<CR>` | Opens terminal |
+| `S` | `:w<CR>` | Alternative saves file |
+| `T` | `:Termdebug<CR>` | Opens Termdebug |
+| `Tab` | `:NvimTreeFocus<CR>` | Focuses the NvimTree |
+| `Leader + k` | `Ctrl+w k` | Moves to the window up |
+| `Leader + h` | `Ctrl+w h` | Moves to the window to the left |
+| `Leader + l` | `Ctrl+w l` | Moves to the window to the right |
+| `Leader + j` | `Ctrl+w j` | Moves to the window down |
+| `Leader + Up Arrow` | `Ctrl+w k` | Arrow key. Moves the window up |
+| `Leader + Left Arrow` | `Ctrl+w h` | Arrow key. Moves window to the left |
+| `Leader + Right Arrow` | `Ctrl+w l` | Arrow key. Moves window to the right |
+| `Leader + Down Arrow` | `Ctrl+w j` | Arrow key. Moves window down |
+| `Leader + v` | `:vsp<CR>` | Splits the window vertically |
+| `Leader + o` | `:sp<CR>` | Splits the window horizontally |
+| `Leader + t` | `:sp \| terminal<CR>` | Splits horizontally and opens terminal |
+| `Ctrl + s` | `:w<CR>` | Saves the file |
+| `Ctrl + q` | `:qa<CR>` | Exits Neovim (all windows) |
+| `Ctrl + a` | `:wa<CR>` | Saves every file (all buffers) |
+| `Alt + n` | `:tabnew<CR>` | Opens a new tab |
+| `Alt + d` | `:tabclose<CR>` | Closes the current tab |
+| `Alt + l` | `:tabnext<CR>` | Goes to the next tab |
+| `Alt + Right Arrow` | `:tabnext<CR>` | Uses arrow keys to go to the next tab |
+| `Alt + h` | `:tabprevious<CR>` | Goes to the previous tab |
+| `Alt + Left Arrow` | `:tabprevious<CR>` | Uses arrow keys to go to the previous tab |
+| `End` | `:qa<CR>` | Force ends the session (exits all) |
+| `Home` | `:q<CR>` | Closes current window |
+| `F2` | `:Run<CR>` | Runs the debugged code |
+
+## Terminal Mode
+
+| Key Combination | Command | Description |
+| :--- | :--- | :--- |
+| `Leader + k` | `Ctrl+w k` | Moves to the window up |
+| `Leader + h` | `Ctrl+w h` | Moves to the window to the left |
+| `Leader + l` | `Ctrl+w l` | Moves the window to the right |
+| `Leader + j` | `Ctrl+w j` | Moves to the window down |
+| `Leader + Up Arrow` | `Ctrl+w k` | Arrow key. Moves the window up |
+| `Leader + Left Arrow` | `Ctrl+w h` | Arrow key. Moves window to the left |
+| `Leader + Right Arrow` | `Ctrl+w l` | Arrow key. Moves window to the right |
+| `Leader + Down Arrow` | `Ctrl+w j` | Arrow key. Moves window down |
+
+**Note:** The leader key is set to `<Space>`
