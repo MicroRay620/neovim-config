@@ -1,6 +1,35 @@
 # Neovim Config
 This is my, Ruby Rose ([MicroRay620](https://github.com/MicroRay620))'s, Neovim config. Feel free to modify, optimize, and/or use it for what ever you want.
 
+# Installation
+## Basics
+- Have a [nerd font](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file) installed
+- Have Git installed
+- Once you complete the steps, run the Mason Install script
+## Installation
+1. Install Neovim if you haven't already
+```bash
+# Debian Based
+sudo apt install nvim -y 
+
+# Fedora Based
+sudo dnf install nvim -y 
+
+# Arch Based
+sudo pacman -S nvim 
+```
+2. Go to your ~/.config directory
+```bash
+cd ~/.config/
+```
+3. Run the git clone command 
+```git 
+git clone https://github.com/MicroRay620/neovim-config.git
+```
+4. Go to the neovim-config directory in your ~/.config directory
+5. Move the `lua/`, and `lsp/` directories; and `init.lua` to the `~/.config/nvim` directory
+
+
 # Plugins
 For plugins, I use [Lazy](github.com/folke/lazy.nvim)
 My config uses the following Plugins:
