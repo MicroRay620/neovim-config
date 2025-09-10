@@ -1,3 +1,6 @@
+vim.g.maplocalleader = " "
+vim.g.mapleader = " " -- This sets the leader to spacebar
+
 -- Navigation Keymaps
 -- Letter Keys
 -- Up
