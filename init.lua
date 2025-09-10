@@ -18,15 +18,14 @@ NoChoices = {
     nowait = true
 }
 
-
+-- keymaps
 -- This only works if I have in the init.lua
--- DO NOT CHANGE THIS
+-- !!!!! DO NOT MOVE THIS TO AN OTHER FILE !!!!!
 vim.g.maplocalleader = " "
 vim.g.mapleader = " " -- This sets the leader to spacebar
 
 
 -- Navigation Keymaps
-
 -- Letter Keys
 -- Up
 vim.keymap.set("n", "<leader>k", "<C-w>k", vim.tbl_extend("keep", NoChoices, {
@@ -70,6 +69,7 @@ vim.keymap.set("n", "<leader><Down>", "<C-w>j", vim.tbl_extend("keep", NoChoices
     silent = false,
     desc = "arrow key. moves window down"
 }))
+
 
 require('keymaps')
 require('config.lazy')
