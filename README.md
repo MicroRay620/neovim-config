@@ -11,12 +11,15 @@ My config uses the following Plugins:
 - [lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [markdown](github.com/tadmccorkle/markdown.nvim)
 - [mason](https://github.com/mason-org/mason.nvim)
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [nvim-dap-lldb](https://github.com/julianolf/nvim-dap-lldb)
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 - [suave](https://github.com/nyngwang/suave.lua)
 - [surround](https://github.com/kylechui/nvim-surround)
+- [telescope](https://github.com/nvim-telescope/telescope.nvim)
+> Need to configure the telescope plugin
 - [theme](https://github.com/Mofiqul/dracula.nvim) 
     - To see the theme I use [theme - dracula](https://github.com/MicroRay620/neovim-config/blob/main/lua/plugins/theme.lua)
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
@@ -39,7 +42,7 @@ When you use the config I have these installed via Mason:
 
 To install these run this script
 ```vim
-:MasonInstall luacheck cspell htmlhint clangd cpplint cpptools csharp-language-server css-lsp debugpy lua-language-server php-debug-adapter eslint-lsp
+:MasonInstall luacheck cspell htmlhint clangd cpplint cpptools csharp-language-server css-lsp debugpy lua-language-server php-debug-adapter eslint-lsp typescript-language-server
 ```
 > The MasonInstalls are optional 
 
