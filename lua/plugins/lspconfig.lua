@@ -7,7 +7,7 @@ local servers = {
     "jsonls", -- JSON LSP (.json)
     "kotlin_language_server", -- Kotlin LSP (.kot)
     "omnisharp", -- C# LSP (.cs)
-    "pyright", -- Python LSP (.py)
+    "pylsp", -- Python LSP (.py)
     "ruby_lsp", -- Ruby LSP (.rb/.erb)
     "rust_analyzer", -- Rust LSB (.rs)
     "ts_ls", -- Javascript/Typescript LSP (.js/.ts)
