@@ -5,13 +5,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
--- Runs Lazy.Nvim on startup
-vim.api.nvim_create_autocmd("VimEnter", {
-    callback = function()
-        vim.cmd("Lazy")
-    end
-})
-
 -- Load Termdebug on startup
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
@@ -31,4 +24,3 @@ require('keymaps')
 require('config.lazy')
 require('config.lsp')
 require('base')
-
