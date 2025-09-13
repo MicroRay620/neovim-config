@@ -22,13 +22,12 @@ sudo pacman -S nvim
 ```bash
 cd ~/.config/
 ```
-3. Run the git clone command 
+3. Run the bash command(s)
 ```bash 
 git clone https://github.com/MicroRay620/neovim-config.git
 cd neovim-config
 mv lua/ lsp/ init.lua .git/ -t ~/.config/nvim 
 ```
-4. Move the `lua/`, and `lsp/` directories; and `init.lua` to the `~/.config/nvim` directory
 
 
 # Plugins
@@ -50,8 +49,8 @@ My config uses the following Plugins:
 - [surround](https://github.com/kylechui/nvim-surround)
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
 > Need to configure the telescope plugin
-- [theme](https://github.com/Mofiqul/dracula.nvim) 
-    - To see the theme I use [theme - dracula](https://github.com/MicroRay620/neovim-config/blob/main/lua/plugins/theme.lua)
+- [theme](https://github.com/MicroRay620/neovim-config/blob/main/lua/plugins/theme.lua)
+    - To see the theme I use [theme - dracula](https://github.com/Mofiqul/dracula.nvim) with [theme - transparent](https://github.com/tribela/transparent.nvim)
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [whichkey](https://github.com/folke/which-key.nvim)
 
