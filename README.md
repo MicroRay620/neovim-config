@@ -23,11 +23,12 @@ sudo pacman -S nvim
 cd ~/.config/
 ```
 3. Run the git clone command 
-```git 
+```bash 
 git clone https://github.com/MicroRay620/neovim-config.git
+cd neovim-config
+mv lua/ lsp/ init.lua .git/ -t ~/.config/nvim 
 ```
-4. Go to the neovim-config directory in your ~/.config directory
-5. Move the `lua/`, and `lsp/` directories; and `init.lua` to the `~/.config/nvim` directory
+4. Move the `lua/`, and `lsp/` directories; and `init.lua` to the `~/.config/nvim` directory
 
 
 # Plugins
