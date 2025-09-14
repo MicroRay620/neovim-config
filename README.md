@@ -51,6 +51,7 @@ My config uses the following Plugins:
 > Need to configure the telescope plugin
 - [theme](https://github.com/MicroRay620/neovim-config/blob/main/lua/plugins/theme.lua)
     - To see the theme I use [theme - dracula](https://github.com/Mofiqul/dracula.nvim) with [theme - transparent](https://github.com/tribela/transparent.nvim)
+    - To get your own theme check [this out](https://dotfyle.com/neovim/colorscheme/top)
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [whichkey](https://github.com/folke/which-key.nvim)
 
