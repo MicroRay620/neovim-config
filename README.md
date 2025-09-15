@@ -114,5 +114,5 @@ For proper usage, make sure to install luarocker
 | `Home` | `:q<CR>` | Closes current window |
 | `F2` | `:Run<CR>` | Runs the debugged code |
 
-To set your own leader go to [init.lua](https://github.com/MicroRay620/neovim-config/blob/main/init.lua) and look for `vim.g.mapleader`, set the quotations to what key you want your leader to be.
+To set your own leader go to [leader.lua](https://github.com/MicroRay620/neovim-config/blog/main/lua/keymaps/lead-keymaps.lua) and look for `vim.g.mapleader`, set the quotations to what key you want your leader to be.
 **Note:** The leader key is set to `<Space>`
