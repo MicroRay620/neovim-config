@@ -29,12 +29,12 @@ cd neovim-config
 mv lua/ lsp/ init.lua .git/ -t ~/.config/nvim 
 ```
 
-
 # Plugins
 For plugins, I use [Lazy](github.com/folke/lazy.nvim)
 My config uses the following Plugins:
 - [aerial](https://github.com/stevearc/aerial.nvim)
 - [completions](https://github.com/hrsh7th/nvim-cmp)
+- [cmp-under-comparation](https://github.com/lukas-reineke/cmp-under-comparator)
 - [flash](https://github.com/folke/flash.nvim)
 - [grapple](https://github.com/cbochs/grapple.nvim)
 - [lspconfig](https://github.com/neovim/nvim-lspconfig)
@@ -42,6 +42,7 @@ My config uses the following Plugins:
 - [mason](https://github.com/mason-org/mason.nvim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [nvim-dap-lldb](https://github.com/julianolf/nvim-dap-lldb)
+- [nvim-hslens](https://github.com/kevinhwang91/nvim-hslens)
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)
@@ -90,6 +91,8 @@ For proper usage, make sure to install luarocker
 | `S` | `:w<CR>` | Alternative saves file |
 | `T` | `:Termdebug<CR>` | Opens Termdebug |
 | `Tab` | `:NvimTreeFocus<CR>` | Focuses the NvimTree |
+| `*` | `:lua require('hslens').start()<CR>` | Searches for instances of word |
+| `#` | `:noh<CR>` | Closes hslens |
 | `Leader + k` | `Ctrl+w k` | Moves to the window up |
 | `Leader + h` | `Ctrl+w h` | Moves to the window to the left |
 | `Leader + l` | `Ctrl+w l` | Moves to the window to the right |
