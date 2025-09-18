@@ -33,7 +33,8 @@ mv lua/ lsp/ init.lua .git/ -t ~/.config/nvim
 For plugins, I use [Lazy](github.com/folke/lazy.nvim)
 My config uses the following Plugins:
 - [aerial](https://github.com/stevearc/aerial.nvim)
-- [completions](https://github.com/hrsh7th/nvim-cmp)
+- [completions](https://github.com/hrsh7th/nvim-cmp0)
+- [cheatsheet](https://github.com/doctorfree/cheatsheet.nvim)
 - [cmp-under-comparation](https://github.com/lukas-reineke/cmp-under-comparator)
 - [flash](https://github.com/folke/flash.nvim)
 - [grapple](https://github.com/cbochs/grapple.nvim)
@@ -46,13 +47,15 @@ My config uses the following Plugins:
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)
+- [snippets]()
 - [suave](https://github.com/nyngwang/suave.lua)
 - [surround](https://github.com/kylechui/nvim-surround)
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
 > Need to configure the telescope plugin
 - [theme](https://github.com/MicroRay620/neovim-config/blob/main/lua/plugins/theme.lua)
-    - To see the theme I use [theme - dracula](https://github.com/Mofiqul/dracula.nvim) with [theme - transparent](https://github.com/tribela/transparent.nvim)
+    - To see the theme I use [theme - dracula](https://github.com/Mofiqul/dracula.nvim) 
     - To get your own theme check [this out](https://dotfyle.com/neovim/colorscheme/top)
+- [transparent]()
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [whichkey](https://github.com/folke/which-key.nvim)
 
